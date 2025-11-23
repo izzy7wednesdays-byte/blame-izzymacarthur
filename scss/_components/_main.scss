@@ -47,7 +47,7 @@ body {
                 }
             }
         }
-        .audrey-xs {
+        .special-message-mobile {
             display: none;
             @include respond(xs) {
                 display: flex;
