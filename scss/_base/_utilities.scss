@@ -1,0 +1,191 @@
+/* Containers */
+.container, 
+.container-fluid,
+.container-xxxl, 
+.container-xxl,
+.container-xl, 
+.container-lg, 
+.container-md, 
+.container-sm, 
+.container-xs, 
+.container-xxs {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1.5rem;
+}
+.container-xxl {
+    max-width: 1600px;
+}
+.container-xl {
+    max-width: 1439px;
+}
+.container-lg {
+    max-width: 1200px;
+}
+.container-md {
+    max-width: 992px;
+}
+.container-sm {
+    max-width: 768px;
+}
+.container-xs {
+    max-width: 576px;
+}
+
+/* Positions */
+.position-absolute {
+    position: absolute;
+}
+.position-relative {
+    position: relative;
+}
+.position-fixed {
+    position: fixed;
+}
+
+/* Text alignment */
+.txt-align-center {
+    text-align: center;
+}
+.txt-align-left {
+    text-align: left;
+}
+.txt-align-right {
+    text-align: right;
+}
+
+/* Heights */
+.h-100 {
+    height: 100%;
+}
+
+/* Widths */
+.w-100 {
+    width: 100%;
+}
+.w-70 {
+    width: 70%;
+}
+.w-40 {
+    width: 40%;
+}
+.w-xs-80 {
+    @include respond(xs) {
+        width: 80%;
+    }
+}
+
+/* Overflow */
+.of-h {
+    overflow: hidden;
+}
+
+/* Display */
+.display-none, .d-n {
+    display: none !important;
+}
+.display-flex, .d-flex, .d-f {
+    display: flex !important;
+}
+.display-grid, .d-g {
+    display: grid !important;
+}
+.display-block, .d-b {
+    display: block !important;
+}
+.d-xs-b {
+    @include respond(xs) {
+        display: block !important;
+    }
+}
+.display-inline-block, .d-ib {
+    display: inline-block;
+}
+
+/* Flex Justify */
+.justify-space-between, .jc-sb {
+    justify-content: space-between;
+}
+.justify-space-evenly, .jc-se {
+    justify-content: space-evenly;
+}
+.fd-c {
+    flex-direction: column;
+}
+.fd-xs-c {
+    @include respond(xs) {
+        flex-direction: column;
+    }
+}
+
+/* Flex Align */
+.align-items-center, .ai-c {
+    align-items: center;
+}
+
+/* Flex */
+.flex-1 {
+    flex: 1;
+}
+
+/* Letter Spacing */
+.ls-1 {
+    letter-spacing: 1px;
+}
+
+/* Stick */
+.stick {
+	position:fixed;
+	top:0px;
+}
+
+/* Disabled text */
+.txt-disabled {
+    pointer-events: none;
+    opacity: 0.5;  
+}
+
+/* Lazy images */
+.lazyImage:before {
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:url(
+             'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAAulBMVEUBAAD/AAAIAAD/CgoOAAAZAAAUAAD/BQUeAAAuAAA9AAA4AAAoAAAjAADmAABCAAA0AAD/IiLhAAD/HR3ZAACcAAD/GBj6AADSAAB8AABMAAD/MDD/EhKxAACYAABRAAD/KSm5AACTAAB2AABHAAD1AADGAACBAADxAACkAACJAADqAACrAABqAABmAADJAADBAACgAACFAABhAACNAAC+AABdAABVAADeAADuAACPAABwAADNAAD/OTmppkF+AAAEnklEQVQ4yxSSWbKiQBREb3rVaocuLYrRAkQQZFIBh6c+3f+22v4/kZGRechNbJQFlCxMAz/UCgmcxc2PplGfUus/17GM6A1ixYbxNh4nyN0QbJKk4vGiW23XfUl3JaY3a9ZXpLv8C3o5bChlBAD2crP7gRevljwc5uF8PkOwpBwGENoqFbzE9wXsHAfndR0v7Ivj8IGGArMsdQjQBRpICJw/D0hPQDMdCntU7FoK4mB6Kfbjm0MKsJIzyqeCAD4MYyMclnF7GeVytXH4OlsVp1NFpuNQPjnJAeWVLBl2aHmH/T5ajTa7YVqb6wjRMKazr6VWLPEFlGA0XmlPAj8YZWKgtP3Zds2J6tAmGGbz0AkERIKQ4XVWvBnO0aSUVeZYv3Q439M5k4IE+N2EGq5i92kJuF22bVHPf1s/iKLXMVCX8Z3gGm1KIfOQhftN+3RAn8pqWw2LALtDulvM7hwQicIufcl4iI/+svwwrMax9ibZrtzc7Drz385o3d8o6TQAu9M+5wY6tAyzM+mbFcVDRQGL+WZop45FFnOBhxuqEMyWZ5Xyq8mJdvpwOe7qbfq4/Vm3Ed1IMIuELSMA8WQoDe0u85jix2tq8y8dq/h0FacRcXNOGI1A8u0HlUt8MGvDLA2e6ThtuI34ulxFR2IhE9dK4AowXKiQDV++Mx+nM3tNO29Wbbmjy4NcV8NjwPw/uysB9jT29CrmVJ8D6hGsaxnse7JYg23gLUOPn57yuFHBs15ucFz99tmktn+WDn4mpBIIZpYAc6k/sLSLReYG9z33yxj239p+kVPu/7VAbstpA0EQbcazy17ZNbGwUFlSdAGZi0QAAQ74/78ruCozD/3S1ae60WWP2bfdv3Z5dah8Nhb6vjLwUrA0FkAEICIIG+N3SYH1e8rnlwZfv26uEMozNMkAAUQjYgZCmtz7MDm779SKzecEf+Z7a6Ad2HtuFQzARkZG9lisOF0V4u3bJZd5GPvF8EQDUEYwe7awkF7gFm7vOdl89Nm7Dvnp2NsNNMhLTSyUAbyQrSK89uYz7Xi9+zMM60I1Se1L0k4qBCtF6ZWDFnDAZr/vj3X5SNdreZ1n1PxdNrE0IBUzR8/DzdmoCPpldkZXDQiHZFkv0qap6owUZwrOEgKJoDRZgdE3023sdje1qe7YFwMvLxw9iEoQ8FPcsmwFft9MUdX2a1d3b2NANt25B6CZACfV06MiGSEJ6T3gre6w/FWKyUeHR7KFVWQIlkxQpIRUioigq4WVp7+nWzmJy6ZKaD6pQoRgAy0oMHEU0nmgl4fLJSabkI3znK650fnIgrQiKp10gpSFgDb4sLS6X4/Dep5tpydznZ3p3Skd9Q+dgPD8H0Uzv+abw+F8mlt8TmvXX7ajapm11ELBe20ZpAIwJHmESY+yfPGqeSlj330Tac9MQGuRUZSsgoQXyeEo0sXZZdUXZ/MW5ZYGeND/kRhCkG8xOdvL683luzsdZrV/24xZ6lmXTy4JVuRaGDA59OtlO6z25fWjeGwXZyoO/UAeAEmwN2z0c56oJGQx7a6zWaRkNru2K0/baWjxzIJjQEoARND8D7+tgCt2HKJNAAAAAElFTkSuQmCC'
+        ) center center repeat;
+    opacity:0;
+    transition:opacity 0.5s;
+}
+.lazyImageWaiting:before {
+    opacity:1;
+    transition:opacity 0s;
+}
+.lazyImageError img,
+.lazyImageWaiting img {
+    opacity:0;
+    transform:scale(0);
+    transition:none;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    background: lightcoral;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}

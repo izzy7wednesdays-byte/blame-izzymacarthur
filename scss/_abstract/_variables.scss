@@ -1,0 +1,37 @@
+$main-font: "Times",serif;
+$small-font: "HelveticaNeue55Roman",sans-serif;
+
+$window-font: "SFProRegular", sans-serif;
+$window-bold-font: "SFProBold", sans-serif;
+
+$comic-font: "Comic", serif;
+
+$font-weight: 400;
+$enable-responsive-font-sizes: true;
+$enable-grid-classes: true;
+$font-size-base: 1.6rem;
+$font-size-base-xs: 1.1rem;
+$font-size-base-sm: 1.4rem;
+$font-size-base-lg: 1.8rem;
+$font-size-base-xl: 2.2rem;
+$font-size-base-xxl: 2.4rem;
+
+// colors
+$main:          #001aff;
+$main_30:       hsla(234, 100%, 50%, .3);
+
+$bg-color:      hsla(0, 0%, 100%, 1);
+$bg-color-40:   hsla(0, 0%, 100%, .4);
+
+$window-color:  #484948;
+$window-bg-color: #F2F4F3;
+
+// Breakpoints
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+);

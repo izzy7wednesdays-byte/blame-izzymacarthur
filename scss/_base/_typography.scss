@@ -1,0 +1,36 @@
+
+/* Typography */
+@font-face {
+    font-family: "HelveticaNeue55Roman";
+    src: url('../assets/fonts/HelveticaNeue55Roman/roman.otf') format('opentype');
+}
+@font-face {
+    font-family: "SFProRegular";
+    src: url('../assets/fonts/SFPro/SFPRODISPLAYREGULAR.otf') format('opentype');
+}
+@font-face {
+    font-family: "SFProBold";
+    src: url('../assets/fonts/SFPro/SFPRODISPLAYBOLD.otf') format('opentype');
+}
+@font-face {
+    font-family: "Times";
+    src: url('../assets/fonts/Times/regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: "Comic";
+    src: url('../assets/fonts/Comic/ComicSansMS3.ttf') format('truetype');
+}
+
+.is-uppercase {
+    text-transform: uppercase;
+}
+
+.small {
+    font-size: 1.1rem;
+    @include respond(xs) {
+        font-size: .8rem;
+    }
+}
+button, input, select, textarea {
+    font-size: initial;
+}

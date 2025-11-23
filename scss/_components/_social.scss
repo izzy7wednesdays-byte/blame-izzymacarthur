@@ -1,0 +1,38 @@
+.social {
+    position: absolute;
+    top: calc(6vh * 1000/847);
+    left: calc(83vh * 1000/847);
+
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+    a {
+       margin: 0 0 0 .7rem;
+        color: var(--clr-light);
+        &:hover {
+            opacity: .8;
+        }
+        &.rca-icon {
+            img {
+                fill: white;
+                width: 18px;
+                max-height: 18px;
+            }
+        }
+        span {
+            &.sr-only {
+                position: absolute;
+                width: 1px;
+                height: 1px;
+                padding: 0;
+                margin: -1px;
+                overflow: hidden;
+                clip: rect(0,0,0,0);
+                border: 0;
+            }
+        }
+    }
+}

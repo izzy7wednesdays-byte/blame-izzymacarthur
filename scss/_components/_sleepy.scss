@@ -1,0 +1,277 @@
+body {
+    .sleepy {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        @include respond(xs) {
+            overflow: hidden;
+        }
+        .face {
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            background-image: url("../assets/img/face/face.webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        
+    
+            z-index: -1;
+            position: absolute;
+            @include respond(xs) {
+                width: 50rem;
+                height: 67rem;
+                top: initial;
+                bottom: 0;
+                transform: translateX(-50%);
+                background-position: bottom;
+                left: 24rem;
+            }
+        }
+        .eye {
+            position: absolute;
+            background-size: cover;
+            background-position: center;
+            transform: translate(-50%, -50%);
+            z-index: -4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &.left-eye {
+                width: 12%;
+                height: 9%;
+                left: 32%;
+                top: 50%;
+                background-image: url('../assets/img/face/left-eye@2x.webp');
+                @include respond(xs) {
+                    width: 7rem;
+                    height: 3.4rem;
+                    left: 14.2rem;
+                    top: initial;
+                    bottom: 29.8rem;
+                }
+            }
+            &.right-eye {
+                width: 12%;
+                height: 9%;
+                left: 56%;
+                top: 50%;
+                background-image: url('../assets/img/face/right-eye@2x.webp');
+                @include respond(xs) {
+                    width: 7rem;
+                    height: 3.4rem;
+                    left: 27.2rem;
+                    top: initial;
+                    bottom: 29.8rem;
+                }
+            }
+            .pupil {
+                position: absolute;
+                background-size: cover;
+                background-position: center;
+                transform: translate(-50%, -50%);
+                z-index: -3;
+                display: flex;
+                &.left-pupil {
+                    width: 6.8rem;
+                    height: 6.8rem;
+                    background-image: url('../assets/img/face/left-pupil@2x.webp');
+                    @include respond(xxxl) {
+                        width: 8.6rem;
+                        height: 8.6rem;
+
+                    }
+                    @include respond(sm) {
+                        left: 44%;
+                        top: 29%;
+                    }
+                    @include respond(xs) {
+                        width: 3.2rem;
+                        height: 3.2rem;
+                    }
+                }
+                &.right-pupil {
+                    width: 6.6rem;
+                    height: 6.6rem;
+                    background-image: url('../assets/img/face/right-pupil@2x.webp');
+                    @include respond(xxxl) {
+                        width: 8.2rem;
+                        height: 8.2rem;
+
+                    }
+                    @include respond(sm) {
+                        left: 57%;
+                        top: 29%;
+                    }
+                    @include respond(xs) {
+                        width: 3rem;
+                        height: 3rem;
+                    }
+                }
+            }
+        }
+        .bright {
+            position: absolute;
+            background-size: cover;
+            background-position: center;
+            transform: translate(-50%, -50%);
+            z-index: -2;
+            &.left-bright {
+                width: 2.5%;
+                height:1.22%;
+                left: 32%;
+                top: 49%;
+                background-image: url('../assets/img/face/left-bright@2x.webp');
+                @include respond(xs) {
+                    width: 1.5rem;
+                    height: .4rem;
+                    top: initial;
+                    bottom: 33.3rem;
+                    left: 13.7rem;
+                }
+            }
+            &.right-bright {
+                width: 2.5%;
+                height: 1.2%;
+                left: 56%;
+                top: 48.7%;
+                background-image: url('../assets/img/face/right-bright@2x.webp');
+                @include respond(xs) {
+                    width: 1.6rem;
+                    height: 0.4rem;
+                    top: initial;
+                    bottom: 33.4rem;
+                    left: 27.7rem;
+                }
+            }
+        }
+    }
+    &.internal {
+        .sleepy {
+            @include respond(xs) {
+                overflow: hidden;
+            }
+            .face {
+                background-position: bottom;
+                background-image: url("../assets/img/face/face-internal.webp");
+                width: 140rem;
+                display: flex;
+                background-size: cover;
+                @include respond(xs) {
+                    background-image: url("../assets/img/face/face-internal-m.webp");
+                    width: 50rem;
+                    height: 50rem;
+                    top: initial;
+                    bottom: 0;
+                    transform: translateX(-50%);
+                                    
+                    // left: 24rem;
+                    left: 50%;
+                }
+            }
+            .eye {
+                &.left-eye {
+                    top: initial;
+                    bottom: 8.6rem;
+                    width: 19rem;
+                    height: 8rem;
+                    left: 50%;
+                    transform: translateX(-36rem);
+                    @include respond(xxxl) {
+                        // bottom: 10.3rem;
+                        // transform: translateX(-38rem);
+                    }
+                    @include respond(xs) {
+                        width: 8rem;
+                        height: 3.4rem;
+                        transform: translateX(-14.5rem);
+                        bottom: 11.9rem;
+                    }
+                }
+                &.right-eye {
+                    top: initial;
+                    bottom: 8.8rem;
+                    width: 19rem;
+                    height: 8rem;
+                    left: 50%;
+                    // right: 50%;
+                    transform: translateX(0);
+                    @include respond(xxxl) {
+                        // transform: translateX(-0rem);
+                        // bottom: 10.4rem;
+                    }
+                    @include respond(xs) {
+                        width: 7.6rem;
+                        height: 3.4rem;
+                        left: 50%;
+                        transform: translateX(0);
+                        bottom: 12.1rem;
+                    }
+                }
+                .pupil {
+                    z-index: -3;
+                    &.left-pupil {
+                        width: 6.6rem;
+                        height: 6.6rem;
+                        @include respond(xs) {
+                            width: 3.2rem;
+                            height: 3.2rem;
+                        }
+                    }
+                    &.right-pupil {
+                        width: 6.6rem;
+                        height: 6.6rem;
+                        @include respond(xs) {
+                            width: 3.2rem;
+                            height: 3.2rem;
+                        }
+                    }
+                }
+            }
+            .bright {
+                &.left-bright {
+                    top: initial;
+                    width: 4.2rem;
+                    height: 1.5rem;
+                    bottom: 13.5rem;
+                    left: 50%;
+                    transform: translateX(-27rem);
+                    @include respond(xxxl) {
+                        // bottom: 15.3rem;
+                        // transform: translateX(-30rem);
+                    }
+                    @include respond(xs) {
+                        width: 2rem;
+                        height: .5rem;
+                        top: initial;
+                        bottom: 13.7rem;
+                        left: 50%;
+                        transform: translateX(-7rem);
+                    }
+                }
+                &.right-bright {
+                    top: initial;
+                    width: 3.6rem;
+                    height: 1.5rem;
+                    bottom: 13.2rem;
+                    left: calc(50% + 9.4rem);
+                    @include respond(xxxl) {
+                        // bottom: 14.9rem;
+                        // left: calc(50% + 9.4rem);
+                    }
+                    @include respond(xs) {
+                        width: 2rem;
+                        height: .5rem;
+                        top: initial;
+                        bottom: 13.9rem;
+                        left: 50%;
+                        transform: translateX(8.3rem);
+                    }
+                }
+            }
+        }
+    }
+}

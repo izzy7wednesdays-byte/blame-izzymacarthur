@@ -1,0 +1,202 @@
+body {
+    & > header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 2.8rem 5rem 0 5rem;
+        opacity: 0;
+        position: relative;
+        top: -5rem;
+        animation: fadeInTop 1s ease forwards; 
+        animation-delay: 1s;
+        @include respond(md) {
+            flex-direction: column;
+            padding: 2.8rem 2rem 0 2rem;
+            align-items: center;
+        }
+        .logo {
+            width: 35rem;
+            height: 13.6rem;
+            background-image: url('../assets/img/Audrey_pink.webp');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            @include respond(xs) {
+                height: 12.6rem;
+                width: 100%;
+            }
+        }
+        button {
+            &#playPauseBtn {
+                transform: translateX(0);
+                border: none;
+                min-width: 23px;
+                max-width: 23px;
+                width: 100%;
+                height: 20px;
+                cursor: pointer;
+                display: inline-block;
+                background-image: url("../assets/img/icons/sound-on.svg");
+                background-size: 100%;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-color: transparent;
+                z-index: 1000;
+                padding: 0;
+                &.is-on {
+                    background-image: url("../assets/img/icons/sound-off.svg");
+                }
+                @include respond(lg) {
+                    margin-right: 0;
+                    text-align: right;
+                    margin-left: auto;
+                }
+                @include respond(md) {
+                    position: absolute;
+                    top: 1.7rem;
+                    right: 1.7rem;
+                    min-width: 20px;
+                    max-width: 20px;
+                    width: 100%;
+                    height: 19px;
+                }
+            }     
+        }
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 3.5rem;
+            opacity: 1;
+            @include respond(lg) {
+                flex-direction: column;
+                gap: 2rem;
+            }
+            @include respond(md) {
+                width: 100%;
+                justify-content: space-between;
+            }
+           
+            ul {
+                display: flex;
+                flex-direction: row;
+                list-style: none;
+                gap: 3.5rem;
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                @include respond(md) {
+                    justify-content: space-between;
+                }
+                @include respond(xs) {
+                    flex-wrap: wrap;
+                    gap: 1.5rem;
+                }
+                li {
+                    display: flex;
+                    transform: translateX(0);
+                    @include respond(xl) {
+                        text-align: center;
+                    }
+                    @include respond(xs) {
+                        justify-content: center;
+                    }
+                    span {
+                        font-family: $main-font;
+                        font-weight: 400;
+                        color: $main;
+                        font-size: 1.5rem;
+                        background-color: transparent;
+                        border: 0;
+                        border-top: 3px solid transparent;
+                        border-bottom: 1px solid transparent;
+                        padding-left: 0;
+                        padding-right: 0;
+                    }
+                    a, button {
+                        font-family: $main-font;
+                        font-weight: 400;
+                        color: $main;
+                        font-size: 1.5rem;
+                        background-color: transparent;
+                        border: 0;
+                        border-top: 3px solid transparent;
+                        border-bottom: 1px solid transparent;
+                        cursor: pointer;
+                        padding-left: 0;
+                        padding-right: 0;
+                        &:hover {
+                            border-bottom: 1px solid $main;
+                        }
+
+                    }
+                    &:last-of-type {
+                        @include respond(xs) {
+                            flex-basis: 100%;
+                        }
+                    }
+                    &.current {
+                        a {
+                            border-bottom: 1px solid $main;
+                        }
+                    }
+                }
+            }
+            .social {
+                @include respond(md) {
+                    display: none;
+                }
+                img {
+                    min-width: 18px;
+                }
+            }
+        }
+    }
+    &.not-signed-up {
+        & > header {
+            .logo {
+                background-image: url('../assets/img/Audrey_Yellow.webp');
+            }
+            button {
+                &#playPauseBtn {
+                    transform: translateX(21rem);
+                    @include respond(md) {
+                        transform: translate(0);
+                    }
+                }
+            }
+            nav {
+                @include respond(md) {
+                    opacity: 0;
+                }
+                ul {
+                    overflow: hidden;
+                    li {
+                        transform: translateX(15rem);
+                        @include respond(md) {
+                            transform: translate(0);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.signed-up {
+        &>header {
+            button {
+                &#playPauseBtn {
+                }
+            }
+            nav {
+                ul {
+                    
+    
+                    li {
+                        
+                    }
+                }
+            }
+        }
+    }
+}

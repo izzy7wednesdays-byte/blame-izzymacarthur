@@ -1,0 +1,105 @@
+.form-container {
+
+    form {
+        display: flex;
+        flex-direction: row;
+        gap: .3rem;
+        width: 100%;
+        label {
+            display: none;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: .5rem;
+            width: 100%;
+            input[type=email] {
+                border: none;
+                border-bottom: 1px solid $main;
+                border-radius: 0;
+                background-color: transparent;
+                color: $main;
+                padding: .5rem 0;
+                height: 2.8rem;
+                font-family: $main-font;
+                font-size: 1.5rem;
+                width: 100%;
+            }
+        }
+        button {
+            background-color: transparent;
+            border: 1px solid $main;
+            color: $main;
+            font-size: 1.5rem;
+            cursor: pointer;
+            font-family: $main-font;
+            font-weight: 400;
+            text-transform: lowercase;
+            padding: .5rem 1.4rem;
+            &:hover {
+                background-color: $main;
+                color: $bg-color;
+            }
+        }
+        &#apple_music_form {
+            .input-group {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                gap: .5rem;
+            }
+            input[type=email] {
+                border: none;
+                border-bottom: 1px solid $main;
+                border-radius: 0;
+                background-color: transparent;
+                color: $main;
+                padding: .5rem 0;
+                height: 2.8rem;
+                font-family: $main-font;
+                font-size: 1.7rem;
+                
+                &::placeholder {
+                    color: $main;
+                    opacity: .5;
+                }
+            }
+            button {
+                background-color: transparent;
+                border: 1px solid $main;
+                color: $main;
+                font-size: 1.7rem;
+                cursor: pointer;
+                font-family: $main-font;
+                font-weight: 400;
+                height: 100%;
+                padding: 0.3rem 1.4rem 0.5rem 1.4rem;
+                &:hover {
+                    color: $bg-color;
+                    background-color: $main;
+                }
+            }
+        }
+    }
+    .input-group {
+        &.checkbox-container {
+            .checkbox {
+                label {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    margin-top: 1rem;
+                    span {
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+        }
+    }
+}
+::placeholder {
+    color: $main;
+    opacity: .5;
+    text-transform: lowercase;
+}

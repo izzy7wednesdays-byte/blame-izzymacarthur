@@ -1,0 +1,83 @@
+.dates {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 4rem;
+    padding: 0;
+    .event {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 18rem;
+        width: 100%;
+        @include respond(md) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.7rem;
+        }
+        .bit-details {
+            font-size: 2.2rem;
+            font-family: $main-font;
+            display: grid;
+            grid-template-columns: 26rem 1fr;
+            gap: 1rem;
+            color: $main;
+            @include respond(md) {
+                display: flex;
+                flex-direction: column;
+                gap: .3rem;
+                text-align: center;
+            }
+            .location {
+                font-family: $small-font;
+                font-size: 1.2rem;
+            }
+            .date {
+                font-size: 3.2rem;
+                text-transform: uppercase;
+            }
+        }
+        .tickets {
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+            justify-content: flex-end;
+            @include respond(xs) {
+                flex-direction: column;
+            }
+            a {
+                color: $main;
+                text-transform: uppercase;
+                font-size: 2.2rem;
+                font-family: $main-font;
+                padding: .4rem 3.5rem;
+                transition: all 200ms;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-width: 13rem;
+                padding: 0.5rem 4rem 0.5rem 4rem;
+                border: 1px solid $bg-color;
+                text-decoration: none;
+                transition: all 200ms;
+                border: 1px solid $main;
+                background-color: transparent;
+                &:hover {
+                    background-color: $main;
+                    color: $bg-color;
+                }
+                @include respond(xs) {
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+    .tour-more-wrap {
+        display: flex;
+        justify-content: flex-end;
+        @include respond(xs) {
+            justify-content: flex-start;
+        }
+    }
+}
